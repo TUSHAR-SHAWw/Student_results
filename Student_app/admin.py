@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.db.models import Sum
 from Student_app.models import *
-# Register your models here.
+# Register your models here
 admin.site.register(Student)
 admin.site.register(Student_id)
 admin.site.register(Division)
