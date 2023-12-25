@@ -1,0 +1,13 @@
+
+
+@media (max-width: 576px) {
+    .d-flex.flex-wrap {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        max-width: 100%; 
+        margin-bottom: 15px; 
+    }
+}

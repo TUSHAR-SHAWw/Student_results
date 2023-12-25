@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block start %}
+{% csrf_token %}
+
+<div class='mt-4 p-3'>
+<table class="table table-striped border border-secondary">
+    <thead>
+      <tr>
+        <th class='fs-4 text-center'>ID</th>
+        <th class='fs-4 text-center'>Name</th>
+        <th class='fs-4 text-center'>Division</th>
+        <th class='fs-4 text-center'>Age</th>
+      </tr>
+    </thead>
+    <tbody class="table-group-divider">
+        {% for student in students%}
+      <tr>
+        <th class=' text-center' style="white-space: nowrap;" ><a href="/report_card/{{student.student_id.student_id}}/">{{student.student_id.student_id}}</a></th>
+        <td class='fs-6 text-center' style="white-space: nowrap;">{{student.student_name}}</td>
+        <td class='fs-6 text-center' style="white-space: nowrap;">{{student.division.division}}</td>
+        <td class='fs-6 text-center' style="white-space: nowrap;">{{student.student_age}}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  
+  <div class="margin-left">
+    <ul class="pagination pagination-lg justify-content-center">
+        {% if students.has_previous %}
+        <li class="page-item"><a class="page-link" href="?page=1">&laquo; first</a></li>
+        <li class="page-item"><a class="page-link" href="?page={{ students.previous_page_number }}">previous</a></li>
+        {% endif %}
+
+        {% comment %} <span class="current">
+            Page {{ students.number }} of {{ students.paginator.num_pages }}.
+        </span> {% endcomment %}
+
+        {% if students.has_next %}
+        <li class="page-item"><a class="page-link" href="?page={{ students.next_page_number }}">next</a></li>
+          <li class="page-item"><a class="page-link" href="?page={{ students.paginator.num_pages }}">last &raquo;</a></li>
+        {% endif %}
+      </ul>
+</div>
+</div>
+  {% endblock %}
