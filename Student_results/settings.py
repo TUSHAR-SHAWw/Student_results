@@ -77,15 +77,15 @@ WSGI_APPLICATION = 'Student_results.wsgi.application'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
-	'default': {
-		'ENGINE': 'mysql.connector.django',
-		'NAME': 'Student_app',
-		'USER': 'root',
-		'PASSWORD': '0000',
-		'HOST':'localhost',
-		'PORT':'3306',
-	}
-}
+ 	'default': {
+ 		'ENGINE': 'django.db.backends.postgresql',
+		'NAME': 'railway',
+		'USER': 'postgres',
+		'PASSWORD': '*Ed-BbG2-FbEAC-EDCFFECdA-bc-2FFb',
+		'HOST':'roundhouse.proxy.rlwy.net',
+ 	'PORT':'32665',
+ 	}
+ }
 
 
 
