@@ -62,3 +62,11 @@ def create_ranks():
             rank=i
         )
         i=i+1
+def create_all(n):
+    create_students(n)
+    print('students done')
+    create_marks()
+    print('marks done')
+    create_ranks()
+    print('ranks done')
+    print('all done')
