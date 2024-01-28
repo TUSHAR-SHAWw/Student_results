@@ -7,7 +7,6 @@ Welcome to the Student Marks and Rank Checker! This web application allows stude
 - **Subject-wise Marks:** Students can view their marks for each subject.
 - **Total Marks:** Check the total marks obtained across all subjects.
 - **Rank:** View the overall rank among other students.
-- **Secure Login:** User authentication ensures data privacy.
 
 ## Technologies Used
 
